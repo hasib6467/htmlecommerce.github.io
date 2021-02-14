@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Ecommerce Template</title>
+    <link rel="icon" href="img/fav-icon.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body onload="pageLoad();">
+
+    <div id="loader"></div>
+    <div id="pageContent" class="animate-bottom">
+        <!-- Header Section -->
+        <header id="header">
+            <section id="announcement-section">
+                <div class="announcement-bar">
+                    <div class="announcement-wrapper">
+                        <p class="announcment-content">
+                            Enjoy Freeshipping all over U.S.A
+                        </p>
+                    </div>
+                </div>
+            </section> <!-- Announcement Section -->
+
+            <section class="header-nav sec-pad" id="headerNav">
+                <div class="header-nav-left">
+                    <!-- hamburger menu icon -->
+                    <button id="menuOn" class="hamburger-button">
+                        <img src="img/menu-on.png" alt="">
+                    </button>
+                    <!-- hamburger menu icon -->
+                    <a href="index.html" class="site-logo">
+                        <img src="img/logo.png" alt="">
+                    </a> <!-- Site Logo -->
+                    <nav id="navMenu" class="main-nav">
+                        <button id="menuOff" class="hamburger-button hamburger-close">
+                            <img src="img/menu-off.png" alt="">
+                        </button>
+
+                        <!-- Mobile Search Box -->
+                        <div class="mobile-search-box">
+                            <form action="" method="post" class="mobile-search-form">
+                                <input type="search" name="s" class="mobile-search-input" placeholder="Search Here">
+                                <button type="submit" class="mobile-search-submit"><img src="img/search-icon.png"
+                                        alt="Search Icon"></button>
+                            </form>
+                        </div>
+                        <!-- Main Menu -->
+
+                        <ul class="main-menu">
+                            <li class="menu-item current-menu-item">
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="products.html">Kids</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="products.html">Men</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="products.html">Women</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="products.html">Trending</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="products.html">Hot Sale</a>
+                            </li>
+
+                        </ul>
+                    </nav><!-- Main Nav -->
+                </div>
+                <div class="header-nav-right">
+                    <div class="header-right-utility">
+                        <ul>
+                            <li class="utitlity-item utility-search">
+                                <button id="searchIcon">
+                                    <img src="img/search-icon.png" alt="Search Icon">
+                                </button>
+                                <button id="closeIcon" class="hidden" title="Close">
+                                    <img src="img/close-icon.png" alt="Close Icon">
+                                </button>
+
+                                <form id="searchForm" class="search-form" action="" method="post">
+                                    <input type="text" class="search-field" placeholder="Search here.">
+                                </form>
+
+                            </li>
+                            <li class="utitlity-item">
+                                <a href="login.html"><img src="img/user-icon.png" alt=""></a>
+                            </li>
+                            <li class="utitlity-item">
+                                <button id="cart"><img src="img/cart-icon.png" alt=""></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section> <!-- Header Nav -->
+
+            <!-- Cart Drawer -->
+            <div class="cart-main" id="cartBox">
+                <div class="cart-wrapper">
+                    <div class="cart-header">
+                        <span>Cart</span>
+                        <button id="cartClose">
+                            <img src="img/menu-off.png" alt="">
+                        </button>
+                    </div>
+                    <div class="cart-body" id="cardBody">
+                        <div class="cart-item-wrapper">
+                            <div class="cart-item" id="cartItem1">
+                                <div class="cart-image">
+                                    <img src="img/product-2.jpg" alt="">
+                                </div>
+                                <div class="cart-info">
+                                    <h2 class="cart-item-heading">Veera Dress - Aqua Print</h2>
+                                    <div class="cart-item-meta">
+                                        <p>Color : <span class="cart-item-color"></span>Blue</p>
+                                        <p>Size : <span class="cart-item-size"></span>XL</p>
+                                        <p class="cart-item-price">Price : $<span id="itemval">50.00</span></p>
+                                    </div>
+                                    <div class="cart-item-actions">
+
+                                        <div class="cart-quantity-wrapper">
+                                            <button id="quantityDecrement"
+                                                onclick="decreaseNumber('textbox','itemval')">-</button>
+                                            <input type="text" id="textbox" value="1">
+                                            <button id="quantityIncreament"
+                                                onclick="increaseNumber('textbox','itemval')">+</button>
+                                        </div>
+
+                                        <a href="#" id="removeItem1" class="remove-cart-item" title="Remove Item">
+                                            <i class="far fa-trash-alt"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div> <!-- Item One -->
+                            <div class="cart-item" id="cartItem2">
+                                <div class="cart-image">
+                                    <img src="img/product-3.jpg" alt="">
+                                </div>
+                                <div class="cart-info">
+                                    <h2 class="cart-item-heading">Veera Dress - Aqua Print</h2>
+                                    <div class="cart-item-meta">
+                                        <p>Color : <span class="cart-item-color"></span>Blue</p>
+                                        <p>Size : <span class="cart-item-size"></span>XL</p>
+                                        <p class="cart-item-price">Price : $<span id="itemval1">50.00</span></p>
+                                    </div>
+                                    <div class="cart-item-actions">
+
+                                        <div class="cart-quantity-wrapper">
+                                            <button id="quantityDecrement"
+                                                onclick="decreaseNumber('textbox1','itemval1')">-</button>
+                                            <input type="text" id="textbox1" value="1">
+                                            <button id="quantityIncreament"
+                                                onclick="increaseNumber('textbox1','itemval1')">+</button>
+                                        </div>
+
+                                        <a href="#" id="removeItem2" class="remove-cart-item" title="Remove Item">
+                                            <i class="far fa-trash-alt"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div> <!-- Item Two -->
+                        </div>
+                    </div>
+                    <div class="cart-footer">
+                        <div class="cart-checkout">
+                            <a href="checkout.html" class="button">
+                                <span>Checkout</span>
+                                <span>-</span>
+                                $<span class="cart-total" id="product_total_amt">100.00</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Cart Drawer -->
+        </header>
+        <!-- Header Section -->
+
+        <!-- Checkout Section -->
+        <div class="checkout-section sec-pad">
+            <div class="checkout-wrapper">
+                <div class="row">
+                    <div class="col-2">
+                        <div class="order-summery">
+                            <p class="checkout-info-title">Cart Overview</p>
+                            <div class="order-summery-items">
+                                <div class="order-summery-item">
+                                    <div class="order-summery-item-thumbnail">
+                                        <img src="img/product-3.jpg" alt="Product Image">
+                                        <span class="order-item-quantity">
+                                            2
+                                        </span>
+                                    </div>
+                                    <div class="order-summery-item-meta">
+                                        <h2 class="order-item-title">
+                                            VEERA DRESS - AQUA PRINT
+                                        </h2>
+                                        <p class="order-item-size">
+                                            Size:<span> XL</span>
+                                        </p>
+                                    </div>
+                                    <div class="order-item-price">
+                                        <span>$89.99</span>
+                                    </div>
+                                </div> <!-- Item 1 -->
+                                <div class="order-summery-item">
+                                    <div class="order-summery-item-thumbnail">
+                                        <img src="img/product-2.jpg" alt="Product Image">
+                                        <span class="order-item-quantity">
+                                            1
+                                        </span>
+                                    </div>
+                                    <div class="order-summery-item-meta">
+                                        <h2 class="order-item-title">
+                                            VEERA DRESS - AQUA PRINT
+                                        </h2>
+                                        <p class="order-item-size">
+                                            Size:<span> L</span>
+                                        </p>
+                                    </div>
+                                    <div class="order-item-price">
+                                        <span>$59.99</span>
+                                    </div>
+                                </div> <!-- Item 2 -->
+                            </div>
+                            <div class="order-summery-discount">
+                                <div class="order-discount-field">
+                                    <input type="text" class="discount-input" placeholder="Enter discount code">
+                                </div>
+                                <button class="discount-button" type="submit">Apply</button>
+                            </div>
+                            <div class="order-summery-total-amount">
+                                <div class="order-summery-subtotal">
+                                    <p class="order-subtotal-wrapper">
+                                        <span class="order-small-title">
+                                            Subtotal:
+                                        </span>
+                                        <span class="order-small-amount">
+                                            $149.98
+                                        </span>
+                                    </p>
+                                    <p class="order-shipping-wrapper">
+                                        <span class="order-small-title">
+                                            Shipping:
+                                        </span>
+                                        <span class="order-small-amount">
+                                            $0.00
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="order-summery-total">
+                                    <p class="order-final-amount">
+                                        <span class="order-small-title">
+                                            Total:
+                                        </span>
+                                        <span class="order-big-amount">
+                                            $149.98
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="checkout-info-wrapper">
+                            <div class="checkout-form-container">
+                                <div class="checkout-no-user">
+                                    <div class="checkout-no-user-header">
+                                        <p class="checkout-info-title">Contact Information</p>
+                                        <p class="no-user-has-account">
+                                            Already have an account?
+                                            <a href="login.html">Login</a>
+                                        </p>
+                                    </div>
+                                    <div class="checkout-no-user-email">
+                                        <input type="email" class="shipping-input-field" placeholder="Email">
+                                    </div>
+                                    <div class="notification-confirmation">
+                                        <div class="notification-checkbox-wrapper">
+                                            <input type="checkbox" id="checkout_buyer_notification" id="" checked
+                                                class="notification-checkbox">
+                                            <label for="checkout_buyer_notification">Keep me up to date on news and
+                                                exclusive offers</label>
+                                        </div>
+                                    </div>
+                                </div> <!-- Checkout No User-->
+
+                                <div class="checkout-shipping-info-wrapper">
+                                    <p class="checkout-info-title">Shipping Information</p>
+
+                                    <div class="checkout-shipping-info">
+                                        <div class="shiping-info-half-fields">
+                                            <div class="shipping-first-name">
+                                                <input type="text" class="shipping-input-field" placeholder="First Name"
+                                                    required>
+                                            </div>
+                                            <div class="shipping-last-name">
+                                                <input type="text" class="shipping-input-field" placeholder="Last Name"
+                                                    required>
+                                            </div>
+                                        </div>
+                                        <div class="shipping-info-company">
+                                            <input type="text" class="shipping-input-field"
+                                                placeholder="Company (Optional)">
+                                        </div>
+                                        <div class="shipping-info-address1">
+                                            <input type="text" class="shipping-input-field" placeholder="Address 1"
+                                                required>
+                                        </div>
+                                        <div class="shipping-info-address2">
+                                            <input type="text" class="shipping-input-field"
+                                                placeholder="Address 2 (Optional)">
+                                        </div>
+                                        <div class="shipping-info-city">
+                                            <input type="text" class="shipping-input-field" placeholder="City" required>
+                                        </div>
+                                        <div class="shiping-info-half-fields">
+                                            <div class="shipping-info-country">
+                                                <select>
+                                                    <option disabled selected hidden>Country/Rigion</option>
+                                                    <option value="Bangladesh">Bangladesh</option>
+                                                    <option value="Bangladesh">India</option>
+                                                    <option value="Bangladesh">Pakistan</option>
+                                                    <option value="Bangladesh">Nepal</option>
+                                                </select>
+                                            </div>
+                                            <div class="shipping-info-zip">
+                                                <input type="text" class="shipping-input-field"
+                                                    placeholder="Postal/Zip Code" required>
+                                            </div>
+                                        </div>
+                                        <div class="shipping-info-phone">
+                                            <input type="text" class="shipping-input-field" placeholder="Phone Number"
+                                                required>
+                                        </div>
+                                    </div>
+                                </div> <!-- Shipping Info Wrapper -->
+                                <div class="checkout-section-divider">
+                                    <span class="checkout-section-divider-content">Payment method</span>
+                                </div>
+                                <!-- Paymment Method -->
+                                <div class="payment-method-wrapper">
+                                    <p class="checkout-info-title">Please select a payment method</p>
+                                    <div class="all-payment-methods">
+                                        <div class="payment-method">
+                                            <input id="payment_method_cod" type="radio" class="input-radio"
+                                                name="payment_method" value="cod" checked="checked">
+                                            <label for="payment_method_cod">
+                                                Cash on delivery </label>
+                                        </div>
+                                        <div class="payment-method">
+                                            <input id="payment_method_ppec_paypal" type="radio" class="input-radio"
+                                                name="payment_method" value="ppec_paypal">
+                                            <label for="payment_method_ppec_paypal">
+                                                PayPal
+                                                <img src="img/paypal.png"
+                                                    alt="PayPal"> 
+                                            </label>
+                                        </div>
+                                        <div class="payment-method">
+                                            <input id="payment_method_credit_card" type="radio" class="input-radio"
+                                                name="payment_method" value="credit_card">
+                                            <label for="payment_method_credit_card">
+                                                Creditcard
+                                                <img src="img/visa-icon.png"> 
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div> <!-- Payment Method -->
+                                <div class="place-order-button">
+                                    <button class="button place-order-btn">
+                                        Place Order
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Checkout Section -->
+
+        <!-- Footer Section -->
+        <footer id="footer">
+            <div class="footer-top sec-pad">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="footer-widget">
+                            <h4 class="widget-title">
+                                Quick Links
+                            </h4>
+                            <ul>
+                                <li>
+                                    <a href="#">Home</a>
+                                </li>
+                                <li>
+                                    <a href="#">Shop</a>
+                                </li>
+                                <li>
+                                    <a href="#">Categories</a>
+                                </li>
+                                <li>
+                                    <a href="#">Cart</a>
+                                </li>
+                                <li>
+                                    <a href="#">About</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div> <!-- Column 1 -->
+                    <div class="col-4">
+                        <div class="footer-widget">
+                            <h4 class="widget-title">
+                                Customer Care
+                            </h4>
+                            <ul>
+                                <li>
+                                    <a href="#">Contact Us</a>
+                                </li>
+                                <li>
+                                    <a href="#">Shipping & Delivery</a>
+                                </li>
+                                <li>
+                                    <a href="#">Returns</a>
+                                </li>
+                                <li>
+                                    <a href="#">FAQ</a>
+                                </li>
+                                <li>
+                                    <a href="#">Gift Cards</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div> <!-- Column 2 -->
+                    <div class="col-4">
+                        <div class="footer-widget">
+                            <h4 class="widget-title">
+                                Social Connection
+                            </h4>
+                            <p class="footer-widget-subtitle">Follow us for updates.</p>
+                            <ul class="social-links">
+                                <li>
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fab fa-youtube"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div> <!-- Column 3 -->
+                    <div class="col-4">
+                        <div class="footer-widget">
+                            <h4 class="widget-title">
+                                Signup for Newsletter
+                            </h4>
+                            <p class="footer-widget-subtitle">Get 10% off when you sign up for our newsletter!</p>
+                            <div class="newsletter">
+                                <form action="" method="post">
+                                    <input type="email" class="newsletter-input" placeholder="Enter your email address">
+                                    <button class="button" type="submit">Subscribe</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div> <!-- Column 4 -->
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright-text">Copyright &copy; 2021 <a href="#">Hasibur Rahman</a></p>
+            </div>
+        </footer>
+        <!-- Footer Section -->
+    </div>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
