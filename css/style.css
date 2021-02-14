@@ -305,7 +305,7 @@ button.search-result{
 
 /* Header Banner */
 #headerBanner{
-    background-image: url('/img/banner-bg.jpg');
+    background-image: url('https://hasib6467.github.io/htmlecommerce.github.io/img/banner-bg.jpg');
     text-align: center;
     padding: 170px 0; 
     background-repeat: no-repeat;
@@ -705,7 +705,7 @@ button.search-result{
     width: 50%;
     -moz-appearance: none;
     -webkit-appearance: none;
-    background:#f7f7f7 url('/img/select-arrow.png') no-repeat center right 10px;
+    background:#f7f7f7 url('https://hasib6467.github.io/htmlecommerce.github.io/img/select-arrow.png') no-repeat center right 10px;
     background-size: 20px 20px;
 }
 .select-options:focus{
@@ -1214,7 +1214,7 @@ p.cart-item-price{
 .shipping-info-country select{
     -moz-appearance: none;
     -webkit-appearance: none;
-    background:#fff url(/img/select-arrow.png) no-repeat center right 10px;
+    background:#fff url(https://hasib6467.github.io/htmlecommerce.github.io/img/select-arrow.png) no-repeat center right 10px;
     background-size: 17px 17px;
     color: #454545;
 }
